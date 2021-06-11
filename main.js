@@ -28,23 +28,22 @@ function updateImages(data) {
 function weatherImage(data) {
     const nubes = data.clouds.all;
 
-    console.log(nubes);
     let src = 'image/dom.png';
    
     if (nubes >= 75){
 
         src = 'image/nubes.png';
-        console.log("object 75");
+ 
 
     }else if (nubes >= 50 && nubes < 75){
 
         src = 'image/nube.png';
-        console.log("object 50");
+
 
     }else if (nubes >= 25 && nubes < 50){
 
         src = 'image/nube.png';
-        console.log("object 50");
+
 
     }
 
@@ -57,7 +56,7 @@ async function buscar(query) {
     try {
         const response = await fetch(`${api.url}?q=${query}&appid=${api.key}&lang=es`);
         const data = await response.json();
-        console.log(data);
+        
 
         if (data.main.temp) {
             clima.style.display = 'block';
