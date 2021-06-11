@@ -4,7 +4,7 @@
 
 body{
     font-family: 'Lato', sans-serif;
-    background-color: rgb(90, 89, 89);
+    background-color: rgb(104, 127, 139);
     
 }
 
@@ -32,7 +32,7 @@ body{
 }
 
 .card{
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.788);
     padding: 20px;
     border-radius: 5px;
     display: none;
@@ -79,7 +79,8 @@ footer{
     position: fixed;
     bottom: 0;
     padding: 20px;
-    border-top: 1px solid gray;
+    border-top: 1px solid white;
     width: 100%;
     text-align: center;
+    color: white;
 }
