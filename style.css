@@ -11,6 +11,7 @@ body{
 .conteiner{
     text-align: center;
     padding: 40px;
+    position: relative;
 
 }
 
@@ -47,9 +48,6 @@ body{
 }
 
 
-
-
-
 .temperatura{
     display: flex;
     align-items: center;
@@ -83,4 +81,51 @@ footer{
     width: 100%;
     text-align: center;
     color: white;
+}
+
+@media (max-width: 500px) {
+    .ciudad{
+        font-size: 45px;
+    }
+
+    .temp{
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+
+    .nubes{
+        font-size: 25px;
+    }
+
+    .img{
+        margin: 8px;
+    }
+
+    footer{
+        padding: 10px;
+    }
+}
+
+@media (max-width: 360px){
+    .ciudad{
+        font-size: 35px;
+    }
+
+    .temp{
+        font-size: 20px;
+        
+    }
+
+    .nubes{
+        font-size: 15px;
+    }
+
+    .img{
+        margin: 8px;
+    }
+
+    footer{
+        padding: 5px;
+        font-size: 12px;
+    }
 }
