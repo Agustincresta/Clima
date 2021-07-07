@@ -9,6 +9,7 @@ const clima = document.getElementById('clima');
 const ciudad = document.getElementById('ciudad');
 const date = document.getElementById('date');
 const img = document.getElementById('img');
+const body = document.getElementById('body');
 const img2 = document.getElementById('img2')
 const temp = document.getElementById('temp');
 const nubes = document.getElementById('nubes');
@@ -17,19 +18,22 @@ const rango = document.getElementById('rango');
 function updateImages(data) {
     const temp = toCelcius(data.main.temp);
     let src = 'image/temperatura.png';
+    body.className += " loco"
     if (temp > 26) {
+        
         src = 'image/calor.png'
     } else if (temp < 20){
         src='image/frio.png'
     }
     img.src = src;
+    
 }
 
 function weatherImage(data) {
     const nubes = data.clouds.all;
 
     let src = 'image/dom.png';
-   
+    
     if (nubes >= 75){
 
         src = 'image/nubes.png';
@@ -69,7 +73,7 @@ async function buscar(query) {
         updateImages(data);
         weatherImage(data);
     } catch (error) {
-        alert('hubo un error')
+        alert('Ubicacion no disponible, ingrese otra')
     }
 }
 
